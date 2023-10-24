@@ -1,0 +1,26 @@
+#type Weather {
+#    city: String
+#    temperature: Float
+#    description: String
+#}
+#
+#type Query {
+#    weatherByCityName(cityName: String!): Weather
+#}
+
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+}
+
+type Query {
+    books: [Book]
+    book(id: ID!): Book
+}
+
+type Mutation {
+    addBook(title: String!, author: String!): Book
+    updateBook(id: ID!, title: String, author: String): Book
+    deleteBook(id: ID!): Book
+}
